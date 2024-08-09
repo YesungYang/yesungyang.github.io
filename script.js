@@ -16,7 +16,7 @@ const xMax = 772;
 const yMin = 35;
 const yMax = 565;
 
-// Stroke 색상 초기화
+// Stroke color reset
 ctx.strokeStyle = document.getElementById("stroke").value;
 
 toolbar.addEventListener("click", (event) => {
@@ -58,14 +58,14 @@ canvas.addEventListener("mousemove", (event) => {
   const x = event.clientX - canvasOffsetX;
   const y = event.clientY - canvasOffsetY;
 
-  // 그림 그릴 수 있는 영역 내에서만 그림을 그리도록 제한
+ // Only drawing in a drawing area.
   if (x >= xMin && x <= xMax && y >= yMin && y <= yMax) {
     ctx.lineWidth = lineWidth;
     ctx.lineCap = "round";
     ctx.lineTo(x, y);
     ctx.stroke();
   } else {
-    // 마우스가 그릴 수 있는 영역을 벗어나면 그리기 멈추기
+    // Once the mouse go out of the drawing area, it stops drawing. 
     isPainting = false;
   }
 });
