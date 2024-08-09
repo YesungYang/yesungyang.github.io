@@ -33,3 +33,7 @@ body {
 #toolbar input {
   width: 100%;
 }
+
+#toolbar label {
+  color: black;
+}
