@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  color: white;
+}
+
+.drawing-board {
+  background-image: url(./assest/New\ blackboardFinal.jpg);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  height: 600px;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+}
+
+#toolbar {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  padding: 10px;
+}
+
+#toolbar * {
+  margin-bottom: 5px;
+}
+
+#toolbar input {
+  width: 100%;
+}
